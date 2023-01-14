@@ -31,6 +31,8 @@ make install
 docker compose up
 
 # Вы восхитительны! Phormally доступен на http://localhost:8000
+
+make test # запустить тесты
 ```
 
 > **Примечание:** если вы на Windows и не пользуетесь [Терминалом](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701) - вы многое теряете, они сделали алиасы для практически всех линуксовых команд.

@@ -17,9 +17,16 @@
                     <img src="/images/phormally_logo.png" class="w-[15rem]" alt="">
                 </div>
                 <!-- Buttons -->
-                <div class="">
-                    <button>Log In</button>
-                </div>
+                @guest
+                    <div class="">
+                        <button>Log In</button>
+                        <button>Sign Up</button>
+                    </div>
+                @endguest
+
+                @auth
+                    <div class="">Your account</div>
+                @endauth
             </nav>
         </div>
     </div>
