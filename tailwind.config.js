@@ -11,6 +11,9 @@ module.exports = {
     extend: {
       fontFamily: {
         'sans': ['Sofia Sans', ...defaultTheme.fontFamily.sans]
+      },
+      scale: {
+        'flip': '-1'
       }
     },
   },
