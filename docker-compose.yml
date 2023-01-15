@@ -83,6 +83,7 @@ services:
   
   # Контейнер с композером для первоначальной установки зависимостей
   composer:
+    container_name: composer
     image: composer:latest
     working_dir: /var/www
     volumes:
