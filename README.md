@@ -27,6 +27,7 @@ Formspree так и работает - конечно он ещё принима
 ```
 git clone https://github.com/drmnk/phormally.git
 cd phormally
+cp .env.example .env
 make install
 docker compose up
 

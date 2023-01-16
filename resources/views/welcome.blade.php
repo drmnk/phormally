@@ -7,6 +7,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
     </style>
+    <title>Phormally</title>
     @vite('resources/css/app.css')
 </head>
 
@@ -20,14 +21,18 @@
             <!-- Buttons -->
             @guest
                 <div class="flex space-x-4">
-                    <button
-                        class="border text-xs md:text-xl bg-blue-500 text-white rounded-xl px-6 py-3 transition duration-500 select-none hover:bg-blue-600 shadow-md">
-                        Log In
-                    </button>
-                    <button
-                        class="border bg-pink-500 text-white rounded-xl px-6 py-3 transition duration-500 select-none text-xl hover:bg-pink-600 shadow-md">
-                        Sign Up
-                    </button>
+                    <a href="/login">
+                        <button
+                            class="border text-xs md:text-xl bg-blue-500 text-white rounded-xl px-6 py-3 transition duration-500 select-none hover:bg-blue-600 shadow-md">
+                            Log In
+                        </button>
+                    </a>
+                    <a href="/signup">
+                        <button
+                            class="border bg-pink-500 text-white rounded-xl px-6 py-3 transition duration-500 select-none text-xl hover:bg-pink-600 shadow-md">
+                            Sign Up
+                        </button>
+                    </a>
                 </div>
             @endguest
 
