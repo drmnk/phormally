@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -16,7 +16,7 @@
         <nav class="flex items-center justify-between p-3 border-b">
             <!-- Logo -->
             <div>
-                <img src="/images/phormally_logo.png" class="w-[15rem]" alt="">
+                <img src="{{ asset('images/phormally_logo.png') }}" class="w-[15rem]" alt="">
             </div>
             <!-- Buttons -->
             @guest
@@ -53,8 +53,8 @@
         </section>
     </div>
 
-    <section class="mt-10" style="background-image: url('/images/easyaspie.jpg')">
-        <img src="/images/phormally_clear.png" class="md:w-full xl:w-1/2" alt="">
+    <section class="mt-10" style="background-image: url('{{ asset('images/easyaspie.jpg')}}')">
+        <img src="{{ asset('images/phormally_clear.png') }}" class="md:w-full xl:w-1/2" alt="">
     </section>
     <div class="text-slate-500 font-thin m-2">Image
         by chandlervid85 on Freepik
@@ -63,7 +63,7 @@
     <section>
         <div class="flex flex-col md:flex-row md:space-x-10 md:w-3/4 lg:w-1/2 mx-auto">
             <div class="">
-                <img class="max-w-[256px] mx-auto"src="/images/tasks_in_notebook.png" alt="">
+                <img class="max-w-[256px] mx-auto" src="{{asset('images/tasks_in_notebook.png')}}" alt="">
             </div>
             <div class="p-6">
                 <span class="text-3xl text-white bg-pink-600">You've created a beatiful website</span>
@@ -75,7 +75,6 @@
                     <li>Deploy this beatiful thing to Netlify or Vercel</li>
                     <li>Celebrate it with a bottle of Crystal</li>
                 </ul>
-                </p>
             </div>
         </div>
     </section>
@@ -89,12 +88,11 @@
                 <ul class="list-disc ml-4 mt-4 text-lg">
                     <li>Call your fellow programmer who knows some Java or C#</li>
                     <li>Learn NodeJS or Python in a hurry</li>
-                    <li>Try to put your beautiful design in a Wordpress with sendmail plugins</li>
+                    <li>Try to put your beautiful design in a WordPress with sendmail plugins</li>
                 </ul>
-                </p>
             </div>
             <div>
-                <img class="transform scale-x-flip max-w-[256px] mx-auto"src="/images/tech_frustration.png"
+                <img class="transform scale-x-flip max-w-[256px] mx-auto" src="{{ asset('images/tech_frustration.png' )}}"
                     alt="">
             </div>
         </div>
@@ -103,7 +101,7 @@
     <section>
         <div class="flex flex-col md:flex-row md:space-x-10 md:w-3/4 lg:w-1/2 mx-auto mt-10">
             <div class="">
-                <img class="max-w-[256px] mx-auto"src="/images/getmail.png" alt="">
+                <img class="max-w-[256px] mx-auto" src="{{ asset('images/getmail.png') }}" alt="">
             </div>
 
             <div class="p-6">
@@ -117,7 +115,6 @@
                     <li>Export data in CSV format</li>
                     <li class="text-pink-600 italic">More features in the future!</li>
                 </ul>
-                </p>
             </div>
         </div>
     </section>
@@ -127,7 +124,7 @@
             <h1 class="mt-5 text-4xl text-center">It's fully free. What are you waiting for?</h1>
             <div class="flex mt-6 justify-center space-x-6">
                 <div>
-                    <img src="/images/phormally_logo.png" class="w-[15rem]" alt="">
+                    <img src="{{ asset('images/phormally_logo.png') }}" class="w-[15rem]" alt="">
                 </div>
                 <div>
                     <button

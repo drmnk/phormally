@@ -29,11 +29,13 @@ class MainPageTest extends TestCase
             ->assertDontSee('Your Account');
     }
 
-    public function test_main_page_got_account_button_when_user_are_logged_in()
+    /** @test */
+    function main_page_got_account_button_when_user_are_logged_in()
     {
         auth()->login(User::factory()->create());
         $this->get('/')
             ->assertDontSee('Log In')
-            ->assertDontSee('Sign Up');
+            ->assertDontSee('Sign Up')
+            ->assertSee('Your account');
     }
 }
