@@ -26,7 +26,7 @@ services:
     image: nginx:stable-alpine
     restart: unless-stopped
     ports:
-      - 8000:80
+      - "8000:80"
     volumes:
       - ./:/var/www
       - ./docker/nginx:/etc/nginx/conf.d
@@ -37,7 +37,7 @@ services:
     image: postgres:14.6
     restart: unless-stopped
     ports:
-      - 5432:5432
+      - "5432:5432"
     environment:
       POSTGRES_USER: ${DB_USERNAME}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
@@ -49,10 +49,10 @@ services:
     image: redis:7.0.7-alpine3.17
     restart: unless-stopped
     ports:
-      - 6379:6379
+      - "6379:6379"
     volumes:
       - ./docker/redisdata:/data
-  
+
   # К сожалению, в докерхабе нет версии под Apple Silicon
   # Придётся билдить, извините за 300MB Go
   # Нужно будет потом залить на докер версию под arm
@@ -64,12 +64,12 @@ services:
       dockerfile: mailhog.dockerfile
     restart: unless-stopped
     ports:
-      - 1025:1025 # Думаю, пригодится для тестирования работы Mailhog
-      - 8025:8025 # Mailhog UI
+      - "1025:1025" # Думаю, пригодится для тестирования работы Mailhog вручную
+      - "8025:8025" # Mailhog UI
     environment:
       # ! TODO: определить, куда Mailhog сохраняет письма и подключить как volume
       MH_STORAGE: maildir
-  
+
   # Контейнер с нодой для ассетов
   node:
     container_name: node
@@ -78,9 +78,9 @@ services:
     volumes:
       - ./:/var/www
     ports:
-      - 5173:5173
+      - "5173:5173"
     command: npm run dev
-  
+
   # Контейнер с композером для первоначальной установки зависимостей
   composer:
     container_name: composer
