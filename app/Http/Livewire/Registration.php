@@ -7,7 +7,9 @@ use Livewire\Component;
 class Registration extends Component
 {
     public $email;
+
     public $password;
+
     public $passwordConfirmation;
 
     public function render()
