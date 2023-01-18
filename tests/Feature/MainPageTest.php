@@ -10,11 +10,6 @@ class MainPageTest extends TestCase
 {
     use RefreshDatabase;
 
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
     public function test_we_get_ok_status_on_main_page()
     {
         $response = $this->get('/');
@@ -30,7 +25,7 @@ class MainPageTest extends TestCase
     }
 
     /** @test */
-    function main_page_got_account_button_when_user_are_logged_in()
+    public function main_page_got_account_button_when_user_are_logged_in()
     {
         auth()->login(User::factory()->create());
         $this->get('/')
